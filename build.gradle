@@ -85,7 +85,7 @@ subprojects {
     }
 }
 
-configure(['core', 'bukkit', 'forge', 'sponge', 'fabric'].collect { project(":worldedit-$it") }) {
+configure(['core', 'bukkit', 'forge', 'sponge', 'fabric', 'cli'].collect { project(":worldedit-$it") }) {
     apply plugin: 'java'
     apply plugin: 'maven'
     apply plugin: 'checkstyle'
@@ -144,7 +144,7 @@ configure(['core', 'bukkit', 'forge', 'sponge', 'fabric'].collect { project(":wo
     }
 }
 
-configure(['bukkit', 'forge', 'sponge', 'fabric'].collect { project(":worldedit-$it") }) {
+configure(['bukkit', 'forge', 'sponge', 'fabric', 'cli'].collect { project(":worldedit-$it") }) {
     shadowJar {
         classifier 'dist'
         dependencies {
